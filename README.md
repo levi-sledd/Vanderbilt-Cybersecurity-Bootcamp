@@ -89,14 +89,12 @@ These Beats allow us to collect the following information from each machine:
 -Metricbeat collects data on machine metrics, e.g. uptime, CPU load, etc.  It then forwards this information to Elasticsearch, at which point it can be visualized with Kibana.
 
 ### Using the Playbook
-In order to use the install-elk.yml playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
-
-SSH into the control node and follow the steps below:
+In order to use the install-elk.yml playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned, SSH into the control node and follow the steps below.
 - Copy the install-elk.yml file to etc/ansible.
 - Update the hosts file to include the [elk] group, which should include the private IP address of the ELK VM.
 - Run the playbook, and navigate to http://[ELK VM's Public IP address]:5601/app/kibana to check that the installation worked as expected.
 
-_TODO: Answer the following questions to fill in the blanks:_
+Notes:
 - The playbook for installing the ELK stack is install-elk.yml
 - To make Ansible run the playbook on a specific machine, first collect the IP addresses of all the machines you would like to install the same software on.  Create a new group in the hosts file, and list the IP addresses belonging to that group each on a separate line under the group name.  In the case of installing the ELK stack, the group is [elk] and consists of one machine.  The line "hosts: elk" in the install-elk.yml playbook specifies that the ELK stack should be installed on all machines whose IP addresses are listed under the [elk] group in the hosts file.  Similarly, to specify that filebeat should be installed on the webservers group, the line hosts: webservers is included in the install-filebeat.yml playbook.
 - To check that the ELK server is running, navigate to http://(ELK VM's Public IP address):5601/app/kibana

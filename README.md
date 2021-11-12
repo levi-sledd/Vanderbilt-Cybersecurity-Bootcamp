@@ -93,8 +93,8 @@ In order to use the install-elk.yml playbook, you will need to have an Ansible c
 
 SSH into the control node and follow the steps below:
 - Copy the install-elk.yml file to etc/ansible.
-- Update the hosts file to include the [elk] group, which should include the IP address of the ELK VM.
-- Run the playbook, and navigate to http://(ELK VM's Public IP address):5601/app/kibana to check that the installation worked as expected.
+- Update the hosts file to include the [elk] group, which should include the private IP address of the ELK VM.
+- Run the playbook, and navigate to http://[ELK VM's Public IP address]:5601/app/kibana to check that the installation worked as expected.
 
 _TODO: Answer the following questions to fill in the blanks:_
 - The playbook for installing the ELK stack is install-elk.yml

@@ -4,7 +4,7 @@ Repository for projects developed during the Vanderbilt Cybersecurity Bootcamp, 
 
 The files in this repository were used to configure the network depicted below.
 
-Network Diagram (Images/Network_Diagram.png)
+[Network Diagram](Images/Network-Diagram.png)
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the Ansible directory may be used to install only certain pieces of it, such as Filebeat.
 
@@ -73,7 +73,7 @@ The install-elk.yml playbook implements the following tasks:
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-['docker ps' Output](Images/docker_ps_output.png)
+['docker ps' Output](Images/docker_ps_Output.png)
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
@@ -97,4 +97,4 @@ In order to use the install-elk.yml playbook, you will need to have an Ansible c
 Notes:
 - The playbook for installing the ELK stack is install-elk.yml
 - To make Ansible run the playbook on a specific machine, first collect the IP addresses of all the machines you would like to install the same software on.  Create a new group in the hosts file, and list the IP addresses belonging to that group each on a separate line under the group name.  In the case of installing the ELK stack, the group is [elk] and consists of one machine.  The line "hosts: elk" in the install-elk.yml playbook specifies that the ELK stack should be installed on all machines whose IP addresses are listed under the [elk] group in the hosts file.  Similarly, to specify that filebeat should be installed on the webservers group, the line hosts: webservers is included in the install-filebeat.yml playbook.
-- To check that the ELK server is running, navigate to http://(ELK VM's Public IP address):5601/app/kibana
+- To check that the ELK server is running, navigate to http://[ELK VM's Public IP address]:5601/app/kibana

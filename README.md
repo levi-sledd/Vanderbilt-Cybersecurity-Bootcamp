@@ -20,10 +20,12 @@ These files have been tested and used to generate a live ELK deployment on Azure
 
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the Dang Vulnerable Web Application.
 
-Load balancing ensures that the application will be highly available, in addition to restricting access to the network.
-Load balancers protect the availability of a web application by providing redundancy and increasing the difficulty of a denial of service attack.  If one web server is down but the other is up, the load balancer can route traffic to the running server.  If both are up, then the load balancer can route traffic so that both servers get a roughly equal share of requests.
+Load balancing ensures that the application will be highly robust, protecting the availability of a web application by providing redundancy.
+If one web server is down but the other is up, the load balancer can route traffic to the running server.  
+If both are up, then the load balancer can route traffic so that both servers get a roughly equal share of requests, thus doubling the computational power needed for a denial-of-service attack.
 
-The advantage of a jump box is that there is a single point where an administrator with the right credentials (the SSH key) can access the network.  This ensures that the attack surface of the network is at a minimum, and that administrator (or root) access to the network is hidden from the internet at large.
+The advantage of a jump box is that there is a single point where an administrator with the right credentials (the SSH key) can access the network.
+This ensures that the attack surface of the network is at a minimum, and that administrator (or root) access to the network is hidden from the internet at large.
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the server and system files.
 - Filebeat logs changes in system files and sends these logs to the ELK stack.
